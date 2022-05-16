@@ -1,4 +1,4 @@
-package com.example.ad_340
+package com.example.kristin_jue_ad_340
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.example.ad_340
+package com.example.kristin_jue_ad_340
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
-const val EXTRA_MESSAGE = "com.example.ad_340.MESSAGE"
+const val EXTRA_MESSAGE = "com.example.kristin_jue_ad_340.MESSAGE"
 
 class MainActivity : AppCompatActivity() {
 

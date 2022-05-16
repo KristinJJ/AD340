@@ -1,4 +1,4 @@
-package com.example.ad_340
+package com.example.kristin_jue_ad_340
 
 import android.content.Intent
 import android.os.Bundle
