@@ -1,4 +1,4 @@
-package com.example.ad_340
+package com.example.kristin_jue_ad_340
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kristin_jue_ad_340.R
 
 const val EXTRA_MESSAGE = "com.example.ad_340.MESSAGE"
 

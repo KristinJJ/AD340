@@ -1,8 +1,9 @@
-package com.example.ad_340
+package com.example.kristin_jue_ad_340
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kristin_jue_ad_340.R
 
 class DisplayMessageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,27 +1,31 @@
-package com.example.ad_340
+package com.example.kristin_jue_ad_340
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.example.kristin_jue_ad_340.R
 import org.json.JSONException
 import org.json.JSONObject
 
 class TrafficCamList : AppCompatActivity() {
-    var mListView: ListView? = null
+    //var mListView: ListView? = null
     var listAdapter: TrafficCamAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_traffic_cam_list)
 
-        mListView = findViewById<ListView>(R.id.trafficCamList)
+        var mListView = findViewById<ListView>(R.id.trafficCamList)
 
         val cameraListArray: ArrayList<TrafficCam> = ArrayList()
+
+        val descriptionList: ArrayList<String> = ArrayList()
 
 
             // Instantiate the RequestQueue.
@@ -43,6 +47,7 @@ class TrafficCamList : AppCompatActivity() {
                             // points may have more than one camera
                             val camera = point.getJSONArray("Cameras").getJSONObject(0)
                             Log.d("TrafficCamListActivity",camera.getString("Description"))
+                            descriptionList.add(camera.getString("Description"))
                             Log.d("TrafficCamListActivity",camera.getString("ImageUrl"))
                             Log.d("TrafficCamListActivity",camera.getString("Type"))
                             val c = TrafficCam(
@@ -65,8 +70,12 @@ class TrafficCamList : AppCompatActivity() {
             queue.add(jsonObjectRequest)
 
             // access the listView from xml file
-            val arrayAdapter = TrafficCamAdapter(this, cameraListArray)
-            mListView?.setAdapter(arrayAdapter)
+            //var mListView = findViewById<ListView>(R.id.trafficCamList)
+            var descriptionAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, descriptionList)
+            mListView?.adapter = descriptionAdapter
+            //val arrayAdapter = TrafficCamAdapter(this, cameraListArray)
+            //mListView?.setAdapter(arrayAdapter)
+            //mListView?.adapter = arrayAdapter
 
         }
 

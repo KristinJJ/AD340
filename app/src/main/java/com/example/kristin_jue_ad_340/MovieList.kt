@@ -1,4 +1,4 @@
-package com.example.ad_340
+package com.example.kristin_jue_ad_340
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kristin_jue_ad_340.R
 
 class MovieList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
